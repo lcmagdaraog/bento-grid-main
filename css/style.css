@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+}
+
+body {
+  padding: min(50px, 8%);
+  background-color: rgb(244, 244, 244);
+  line-height: 1;
+}
+body img {
+  max-width: 150%;
+  display: block;
+}
+
+main .bento {
+  display: grid;
+  gap: 2rem;
+  max-inline-size: 900px;
+  margin-inline: auto;
+  grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight";
+}
+@media (width > 830px) {
+  main .bento {
+    grid-template-areas: "seven one one four" "seven two three four" "eight two three four" "eight six five five";
+  }
+}
+main .bento .container-social {
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  text-wrap: balance;
+  background-color: hsl(256, 67%, 59%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 2rem 3rem;
+  grid-area: one;
+}
+main .bento .container-social h1 {
+  font-weight: 500;
+}
+main .bento .container-social h1 span:first-child {
+  color: hsl(39, 100%, 71%);
+}
+main .bento .container-social h1 span:nth-child(2) {
+  font-style: italic;
+}
+main .bento .container-social img {
+  width: 80%;
+  margin-bottom: -10px;
+}
+main .bento .container-social p {
+  color: hsl(31, 66%, 93%);
+}
+@media (width > 830px) {
+  main .bento .container-social img {
+    width: 50%;
+  }
+}
+main .bento .container-manage {
+  display: grid;
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  background-color: hsl(0, 0%, 100%);
+  font-size: 15px;
+  grid-area: two;
+  overflow: clip;
+}
+main .bento .container-manage h2 {
+  font-weight: 500;
+}
+main .bento .container-manage img {
+  width: 100%;
+  filter: drop-shadow(0 0 1rem hsla(0, 0%, 0%, 0.3));
+}
+@media (width > 830px) {
+  main .bento .container-manage img {
+    width: 150%;
+  }
+}
+main .bento .container-maintain {
+  display: grid;
+  gap: 1rem;
+  border-radius: 10px;
+  background-color: hsl(39, 100%, 71%);
+  padding: 1rem 1rem 0;
+  overflow: clip;
+  grid-area: three;
+}
+main .bento .container-maintain h2 {
+  font-weight: 500;
+}
+main .bento .container-maintain img {
+  width: 70%;
+  margin-bottom: -20px;
+}
+@media (width > 830px) {
+  main .bento .container-maintain img {
+    width: 100%;
+    margin-bottom: -50px;
+  }
+}
+main .bento .container-sched {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  border-radius: 10px;
+  gap: 1rem;
+  background-color: hsl(254, 88%, 90%);
+  padding: 1rem;
+  grid-area: four;
+  overflow: clip;
+}
+main .bento .container-sched h2 {
+  font-weight: 500;
+}
+main .bento .container-sched p {
+  padding: 1rem 1rem;
+}
+main .bento .container-sched img {
+  width: 100%;
+}
+@media (width > 830px) {
+  main .bento .container-sched {
+    justify-items: start;
+    text-align: start;
+  }
+  main .bento .container-sched img {
+    width: 150%;
+  }
+  main .bento .container-sched p {
+    padding: 0;
+  }
+}
+main .bento .container-grow {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  border-radius: 10px;
+  gap: 1.5rem;
+  background-color: hsl(256, 67%, 59%);
+  padding: 1rem 3rem;
+  grid-area: five;
+}
+main .bento .container-grow h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+  font-size: 25px;
+}
+main .bento .container-grow img {
+  width: 100%;
+}
+@media (width > 830px) {
+  main .bento .container-grow {
+    align-items: center;
+    justify-items: start;
+    text-align: start;
+    gap: 0.5rem;
+    grid-template-columns: 0.8fr 1fr;
+    padding: 1rem 1rem;
+  }
+  main .bento .container-grow h2 {
+    font-size: 25px;
+  }
+  main .bento .container-grow img {
+    width: 100%;
+  }
+}
+main .bento .container-56 {
+  display: grid;
+  gap: 1.5rem;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem 1rem;
+  grid-area: six;
+}
+main .bento .container-56 h2 {
+  font-size: 38px;
+  font-weight: 600;
+}
+main .bento .container-56 img {
+  width: 60%;
+}
+@media (width > 830px) {
+  main .bento .container-56 {
+    gap: 0;
+  }
+  main .bento .container-56 img {
+    width: 90%;
+    margin-top: 10px;
+  }
+  main .bento .container-56 p {
+    font-size: 13px;
+  }
+}
+main .bento .container-create {
+  display: grid;
+  gap: 1.5rem;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  background-color: hsl(31, 66%, 93%);
+  grid-area: seven;
+}
+main .bento .container-create h2 {
+  font-weight: 500;
+}
+main .bento .container-create span {
+  font-style: italic;
+  color: hsl(256, 67%, 59%);
+}
+main .bento .container-create img {
+  width: 50%;
+}
+@media (width > 830px) {
+  main .bento .container-create {
+    align-content: center;
+    justify-content: center;
+  }
+  main .bento .container-create img {
+    padding-top: 0;
+    width: 100%;
+  }
+}
+main .bento .container-ai {
+  display: grid;
+  gap: 1.5rem;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  background-color: hsl(39, 100%, 71%);
+  grid-area: eight;
+}
+main .bento .container-ai img {
+  width: 70%;
+}
+@media (width > 830px) {
+  main .bento .container-ai {
+    align-content: center;
+    justify-items: start;
+    padding: 0.6rem 2rem 0.6rem 1rem;
+  }
+  main .bento .container-ai h2 {
+    font-weight: 500;
+  }
+  main .bento .container-ai img {
+    width: 120%;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */

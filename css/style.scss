@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+$purple1 : hsl(254, 88%, 90%);
+$purple5 :hsl(256, 67%, 59%);
+$yellow1 :hsl(31, 66%, 93%);
+$yellow5 :hsl(39, 100%, 71%);
+$white :hsl(0, 0%, 100%);
+$black :hsl(0, 0%, 7%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+}
+body{
+    padding: min(50px,8%);
+    background-color: rgb(244, 244, 244);
+    line-height: 1;
+    img{
+        max-width: 150%;
+        display: block;
+        
+    }
+}
+main{
+    
+    .bento{
+        display: grid;
+        gap: 2rem;
+        max-inline-size: 900px;
+        margin-inline: auto ;
+        grid-template-areas: 
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+        'six'
+        'seven'
+        'eight'
+        ;
+        @media (width > 830px){
+            grid-template-areas:
+            "seven one one four"
+            "seven two three four"
+            "eight two three four"
+            "eight six five five"
+            ;
+        }
+        
+
+        .container-social{
+            display:grid;
+            gap: 1rem;
+            align-content: center;
+            justify-items: center;
+            text-align: center;
+            text-wrap: balance;
+            background-color: $purple5;
+            color: $white;
+            border-radius: 10px;
+            padding: 2rem 3rem;
+            grid-area: one;
+            h1{
+                font-weight: 500;
+                span:first-child{
+                    color:$yellow5;
+                }
+                span:nth-child(2){
+                    font-style: italic;
+                }
+            }
+            
+            img{
+                width: 80%;
+                margin-bottom: -10px;
+            }
+            p{
+                color: $yellow1;
+            }
+
+            @media (width > 830px){
+                img{
+                    width: 50%;
+                }
+
+            }
+        }
+        .container-manage{
+            display: grid;
+            gap: 1rem;
+            border-radius: 10px;
+            padding: 1rem 1rem;
+            background-color: $white;
+            font-size: 15px;
+            grid-area: two;
+            overflow: clip;
+            h2{
+                font-weight: 500;
+            }
+            img{
+                width: 100%;
+                filter: drop-shadow(0 0 1rem hsl(0 0% 0% / .3));
+            }
+            @media( width > 830px){
+                img{
+                    width: 150%;
+                }
+            }
+        }
+        .container-maintain{
+            display: grid;
+            gap: 1rem;
+            border-radius: 10px;
+            background-color: $yellow5;
+            padding: 1rem 1rem 0;
+            overflow: clip;
+            grid-area: three;
+            h2{
+                font-weight: 500;
+            }
+            img{
+                width: 70%;
+                margin-bottom: -20px;
+            }
+            @media( width > 830px){
+                img{
+                    width: 100%;
+                    margin-bottom: -50px;
+                }
+            } 
+        }
+        .container-sched{
+            display: grid;
+            align-content: center;
+            justify-items: center;
+            text-align: center;
+            border-radius: 10px;
+            gap: 1rem;
+            background-color: $purple1;
+            padding: 1rem;
+            grid-area: four;
+            overflow: clip;
+            h2{
+                font-weight: 500;
+            }
+            p{
+                padding: 1rem 1rem ;
+            }
+            img{
+                width: 100%;
+            }
+            @media( width > 830px){
+                justify-items: start;
+                text-align: start;
+                img{
+                    width: 150%;
+                }
+                p{
+                    padding: 0;
+                }
+            } 
+        }
+        .container-grow{
+            display: grid;
+            align-content: center;
+            justify-items: center;
+            text-align: center;
+            border-radius: 10px;
+            gap: 1.5rem;
+            background-color: $purple5;
+            padding: 1rem 3rem;
+            grid-area: five;
+            h2{
+                color: $white;
+                font-weight: 400;
+                font-size: 25px;
+            }
+            img{
+                width: 100%;
+            }
+            @media (width > 830px){
+                align-items: center;
+                justify-items: start;
+                text-align: start;
+                gap: .5rem;
+                grid-template-columns: .8fr 1fr;
+                padding: 1rem 1rem;
+                h2{
+                    font-size: 25px;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .container-56{
+            display: grid;
+            gap: 1.5rem;
+            border-radius: 10px;
+            background-color: $white;
+            padding: 1rem 1rem;
+            grid-area: six;
+            h2{
+                font-size: 38px;
+                font-weight: 600;
+            }
+            img{
+                width: 60%;
+            }
+            @media (width > 830px){
+                gap: 0;
+                img{
+                    width: 90%;
+                    margin-top: 10px;
+                }
+                p{
+                    font-size: 13px;
+                }
+
+            }
+        }
+        .container-create{
+            display: grid;
+            gap: 1.5rem;
+            border-radius: 10px;
+            padding: 1rem 1rem;
+            background-color: $yellow1;
+            grid-area: seven;
+            h2{
+                font-weight: 500;
+            }
+            span{
+                font-style: italic;
+                color: $purple5;
+            }
+            img{
+                width:50%;
+            }
+            @media( width > 830px){
+                align-content: center;
+                justify-content: center;
+                img{
+                    padding-top: 0;
+                    width: 100%;
+                }
+            }
+        }
+        .container-ai{
+            display: grid;
+            gap: 1.5rem;
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            background-color: $yellow5;
+            grid-area: eight;
+            img{
+                width: 70%;
+            }
+            @media (width > 830px){
+                align-content: center;
+                justify-items: start;
+                padding: .6rem 2rem .6rem 1rem;
+                h2{
+                    font-weight: 500;
+                }
+                img{
+                    width: 120%;
+                }
+                
+
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
